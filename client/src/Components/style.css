@@ -1,0 +1,43 @@
+/* Slider container to manage overflow */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 250px;  /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  /* The images row styling */
+  .images-row {
+    display: flex;
+    transition: transform 5s ease-in-out;
+    justify-content: space-between;
+  }
+  
+  /* Left row - starting position */
+  .left-row {
+    transform: translateX(0);
+  }
+  
+  /* Right row - starting position */
+  .right-row {
+    transform: translateX(0);
+  }
+  
+  /* Move the left row to the left */
+  .move-left {
+    transform: translateX(-100%);
+  }
+  
+  /* Move the right row to the right */
+  .move-right {
+    transform: translateX(100%);
+  }
+  
+  /* Styling for each image */
+  .image {
+    width: 150px;   /* Adjust as per your design */
+    height: 150px;  /* Adjust as per your design */
+    object-fit: cover;
+    margin: 5px;
+  }
+  
