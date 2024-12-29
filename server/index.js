@@ -1,11 +1,46 @@
-// Importing required modules using import
 import express from 'express';
+import fetch from 'node-fetch'; // For making HTTP requests
+import cors from 'cors';
+import axios from 'axios';
+import mongoose from 'mongoose'; // For MongoDB connection
+import dotenv from 'dotenv';
+import bodyParser from 'body-parser';
+import AuthRouter from './Routes/AuthRouter.js'
+import UserModel from './Models/User.js';
+import nodemailer from 'nodemailer'
+import jwt from 'jsonwebtoken'
+import bcrypt from 'bcrypt'
 
 const app = express();
-const port = 3000; // Define your port
+
 
 // Middleware to parse incoming JSON requests
 app.use(express.json());
+dotenv.config();
+app.use(cors());
+app.use(bodyParser.json());
+
+
+
+
+const port =process.env.PORT ;
+
+// MongoDB connection
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_CONN);
+    console.log('MongoDB connected');
+  } catch (error) {
+    console.error('Error connecting to MongoDB:', error);
+    process.exit(1); 
+  }
+};
+
+
+// Connect to MongoDB
+connectDB();
+
+app.use('/auth',AuthRouter);
 
 // Define a route for the root URL ("/")
 app.get('/', (req, res) => {

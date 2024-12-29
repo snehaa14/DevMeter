@@ -3,7 +3,7 @@ import image1 from '../assets/images/photo3.jpg'
 
 const Section1 = () => {
   return (
-    <div className="w-full flex items-center justify-between p-8 mt-32 mb-10">
+    <div className="w-full flex items-center justify-between p-8 mt-32 mb-28">
       {/* Left Section: Image */}
       <div className="w-1/3">
         <img
