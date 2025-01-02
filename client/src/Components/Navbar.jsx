@@ -54,6 +54,16 @@ const Navbar = () => {
             About
           </Link>
         </li>
+        <li>
+          <Link
+            to="/contest/upcoming-contest"
+            className={`text-xl ${
+              location.pathname === '/about' ? 'text-red-600 font-bold' : 'text-gray-700 hover:text-red-600'
+            }`}
+          >
+            Upcoming Contest
+          </Link>
+        </li>
       </ul>
 
       {/* Action Buttons */}

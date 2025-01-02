@@ -1,15 +1,13 @@
 import express from 'express';
-import fetch from 'node-fetch'; // For making HTTP requests
 import cors from 'cors';
 import axios from 'axios';
 import mongoose from 'mongoose'; // For MongoDB connection
 import dotenv from 'dotenv';
 import bodyParser from 'body-parser';
 import AuthRouter from './Routes/AuthRouter.js'
-import UserModel from './Models/User.js';
-import nodemailer from 'nodemailer'
-import jwt from 'jsonwebtoken'
-import bcrypt from 'bcrypt'
+
+
+import contestRoute from './Routes/contestRoutes.js'
 
 const app = express();
 
@@ -41,11 +39,13 @@ const connectDB = async () => {
 connectDB();
 
 app.use('/auth',AuthRouter);
+app.use('/contest', contestRoute);
 
 // Define a route for the root URL ("/")
 app.get('/', (req, res) => {
   res.send('Hello World!'); // Send a simple response
 });
+
 
 
 
