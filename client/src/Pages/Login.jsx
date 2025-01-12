@@ -60,63 +60,64 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center w-[100%] items-center min-h-screen bg-black">
-      <div className="w-full max-w-lg bg-[rgba(38,38,38,1)] p-8 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-semibold text-center text-white mb-6">Log In</h2>
-        
-        {/* Display error message */}
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
-
-        <form onSubmit={handleSubmit}>
-          {/* Email input */}
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-white">Email Address</label>
-            <input   
-              type="email"  
-              id="email" 
-              className="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"  
-              value={email}  
-              onChange={(e) => setEmail(e.target.value)}  
-              placeholder="Enter your email"
-            />
-          </div>
-
-          {/* Password input */}
-          <div className="mb-6">
-            <label htmlFor="password" className="block text-sm font-medium text-white">Password</label>
-            <input 
-              type="password" 
-              id="password" 
-              className="w-full p-3 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"  
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)} 
-              placeholder="Enter your password" 
-            />
-          </div>
-
-          {/* Forgot password link */}
-          <div className="mb-6 text-right">
-            <Link to="/forgot-password" className="text-sm text-indigo-600 hover:text-indigo-700">Forgot Password?</Link>
-          </div>
-
-          {/* Submit button */}
-          <button 
-            type="submit" 
-            className="w-full py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          >
-            Log In
-          </button>
-        </form>
-
-        {/* Redirect to signup page if the user does not have an account */}
-        <div className="mt-2 text-center">
-          <p className="text-sm text-white ml-1">
-            Don't have an account? 
-            <Link to="/signup" className="text-indigo-600 hover:text-indigo-700 ml-2">Sign up here</Link>
-          </p>
+    <div className="flex justify-center items-center h-full w-full bg-gradient-to-r from-indigo-500 to-purple-500">
+    <div className="w-full max-w-lg bg-white p-8 rounded-2xl shadow-xl border-2 border-indigo-600">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Log In</h2>
+      
+      {/* Display error message */}
+      {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+  
+      <form onSubmit={handleSubmit}>
+        {/* Email input */}
+        <div className="mb-6">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
+          <input   
+            type="email"  
+            id="email" 
+            className="w-full p-4 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg"  
+            value={email}  
+            onChange={(e) => setEmail(e.target.value)}  
+            placeholder="Enter your email"
+          />
         </div>
+  
+        {/* Password input */}
+        <div className="mb-6">
+          <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            className="w-full p-4 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-lg"  
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            placeholder="Enter your password" 
+          />
+        </div>
+  
+        {/* Forgot password link */}
+        <div className="mb-6 text-right">
+          <Link to="/forgot-password" className="text-sm text-indigo-600 hover:text-indigo-700 focus:text-indigo-800 transition duration-300">Forgot Password?</Link>
+        </div>
+  
+        {/* Submit button */}
+        <button 
+          type="submit" 
+          className="w-full py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300 transform hover:scale-105"
+        >
+          Log In
+        </button>
+      </form>
+  
+      {/* Redirect to signup page if the user does not have an account */}
+      <div className="mt-4 text-center">
+        <p className="text-sm text-gray-600">
+          Don't have an account? 
+          <Link to="/signup" className="text-indigo-600 hover:text-indigo-700 ml-2 font-semibold">Sign up here</Link>
+        </p>
       </div>
     </div>
+  </div>
+  
   );
 };
 

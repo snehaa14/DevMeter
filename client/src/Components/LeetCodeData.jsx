@@ -33,7 +33,8 @@ const LeetCodeData = ({ userData }) => {
 
 
   return (
-    <div className="mt-8 ml-36 flex justify-center items-center flex-col">
+    <div className="mt-10 ml-36 flex justify-center items-center flex-col ">
+      <h1 className='text-white mt-4 font-extrabold text-4xl mb-4'>Leetcode Data</h1>
       <div className="flex flex-wrap justify-start w-full space-x-4">
         {/* Total Solved */}
         <div className="flex flex-row items-center p-6 w-72 h-36 border-2 border-gray-300 rounded-lg shadow-lg">
@@ -82,30 +83,30 @@ const LeetCodeData = ({ userData }) => {
       </div>
 
 
-      <div className="flex flex-wrap gap-4 w-full mt-10">
+      <div className="flex flex-wrap gap-4 w-full mt-10 ml-40">
   {/* Easy Difficulty */}
-  <div className="p-4 rounded-lg border-2 border-gray-300 shadow-lg bg-white flex flex-col justify-between items-center w-full sm:w-1/4 h-48 transition-all hover:shadow-xl hover:scale-105">
+  <div className="p-4 animate-border-move text-white rounded-lg border-2 border-gray-300 shadow-lg  flex flex-col justify-between items-center w-full sm:w-1/4 h-48 transition-all hover:shadow-xl hover:scale-105">
     <div>
-      <h4 className="text-xl text-black font-semibold">Easy</h4>
-      <p className="text-lg text-black">{userData.easySolved} / {userData.totalEasy}</p>
+      <h4 className="text-xl  font-semibold">Easy</h4>
+      <p className="text-lg">{userData.easySolved} / {userData.totalEasy}</p>
     </div>
     <ProgressCircle percentage={(userData.easySolved / userData.totalEasy) * 100} color="#4CAF50" />
   </div>
 
   {/* Medium Difficulty */}
-  <div className="p-4 bg-white rounded-lg border-2 border-gray-300 shadow-lg flex flex-col justify-between items-center w-full sm:w-1/4 h-48 transition-all hover:shadow-xl hover:scale-105">
+  <div className="p-4 animate-border-move text-white rounded-lg border-2 border-gray-300 shadow-lg flex flex-col justify-between items-center w-full sm:w-1/4 h-48 transition-all hover:shadow-xl hover:scale-105">
     <div>
-      <h4 className="text-xl text-black font-semibold">Medium</h4>
-      <p className="text-lg text-black">{userData.mediumSolved} / {userData.totalMedium}</p>
+      <h4 className="text-xl  font-semibold">Medium</h4>
+      <p className="text-lg ">{userData.mediumSolved} / {userData.totalMedium}</p>
     </div>
     <ProgressCircle percentage={(userData.mediumSolved / userData.totalMedium) * 100} color="#FFEB3B" />
   </div>
 
   {/* Hard Difficulty */}
-  <div className="p-4 bg-white rounded-lg border-2 border-gray-300 shadow-lg flex flex-col justify-between items-center w-full sm:w-1/4 h-48 transition-all hover:shadow-xl hover:scale-105">
+  <div className="p-4 text-white animate-border-move  rounded-lg border-2 border-gray-300 shadow-lg flex flex-col justify-between items-center w-full sm:w-1/4 h-48 transition-all hover:shadow-xl hover:scale-105">
     <div>
-      <h4 className="text-black text-xl font-semibold">Hard</h4>
-      <p className="text-black text-lg">{userData.hardSolved} / {userData.totalHard}</p>
+      <h4 className=" text-xl font-semibold">Hard</h4>
+      <p className="text-lg">{userData.hardSolved} / {userData.totalHard}</p>
     </div>
     <ProgressCircle
       percentage={(userData.hardSolved / userData.totalHard) * 100}
@@ -113,6 +114,8 @@ const LeetCodeData = ({ userData }) => {
     />
   </div>
 </div>
+
+
 
 
     </div>

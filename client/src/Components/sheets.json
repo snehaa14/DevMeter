@@ -1,0 +1,30 @@
+{
+    "Striver SDE Sheet": {
+      "title": "Striver SDE Sheet",
+      "description": "SDE Sheet contains very handily crafted and picked top coding interview questions from different topics of Data Structures & Algorithms.",
+      "total": 191,
+      "questions": [
+        { "id": 1, "title": "Find the duplicate number", "link": "https://leetcode.com/problems/find-the-duplicate-number/" },
+        { "id": 2, "title": "Merge Intervals", "link": "https://leetcode.com/problems/merge-intervals/" }
+      ]
+    },
+    "Love Babbar DSA Sheet": {
+      "title": "Love Babbar DSA Sheet",
+      "description": "Detailed description for Love Babbar DSA Sheet",
+      "total": 450,
+      "questions": [
+        { "id": 1, "title": "Reverse the array", "link": "https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/" },
+        { "id": 2, "title": "Find the maximum and minimum element in an array", "link": "https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/" }
+      ]
+    },
+    "NeetCode 150": {
+      "title": "NeetCode 150",
+      "description": "Detailed description for NeetCode 150",
+      "total": 150,
+      "questions": [
+        { "id": 1, "title": "Two Sum", "link": "https://leetcode.com/problems/two-sum/" },
+        { "id": 2, "title": "Add Two Numbers", "link": "https://leetcode.com/problems/add-two-numbers/" }
+      ]
+    }
+  }
+  

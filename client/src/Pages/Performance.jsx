@@ -1,79 +1,180 @@
-// Performance.js
 import React, { useState } from 'react';
 import Navbar from '../Components/Navbar';
 import Button from '../Components/Button';
 import axios from 'axios';
 import LeetCodeData from '../Components/LeetCodeData';
+import LeetCodeSubmissionChart from '../Components/LeetCodeSubmissionChart'; 
+import CodeChefData from '../Components/CodeChef';  // Import CodeChefData component
 
 function Performance() {
-  const [username, setUsername] = useState('');
+  const [leetCodeUsername, setLeetCodeUsername] = useState('');
+  const [gfgUsername, setGfgUsername] = useState('');
+  const [codeforcesUsername, setCodeforcesUsername] = useState('');
+  const [codechefUsername, setCodechefUsername] = useState('');
   const [loading, setLoading] = useState(false);
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [chartData, setChartData] = useState(null);
+  const [codechefData, setCodechefData] = useState(null);
 
-  const handleChange = (e) => setUsername(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (name === 'leetCodeUsername') setLeetCodeUsername(value);
+    if (name === 'gfgUsername') setGfgUsername(value);
+    if (name === 'codeforcesUsername') setCodeforcesUsername(value);
+    if (name === 'codechefUsername') setCodechefUsername(value);
+  };
 
-  const handleLeetSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    if (username) {
-      try {
-        console.log('username:', username);
-        const response = await axios.get(`http://localhost:5000/leetcode/${username}`);
-        setUserData(response.data);
-        console.log('userData:', response.data);
-        setError(null);
-        setSubmitted(true);
-        setLoading(false);
-      } catch (err) {
-        setError('Error fetching data, please try again');
-        setUserData(null);
-        setSubmitted(false);
-        setLoading(false);
+
+    try {
+      let response;
+      if (leetCodeUsername) {
+        response = await axios.get(`http://localhost:5000/leetcode/${leetCodeUsername}`);
       }
+      if (gfgUsername) {
+        response = await axios.get(`http://localhost:5000/gfg/${gfgUsername}`);
+      }
+      if (codeforcesUsername) {
+        response = await axios.get(`http://localhost:5000/codeforces/${codeforcesUsername}`);
+      }
+      if (codechefUsername) {
+        try {
+          const response = await axios.get(`http://localhost:5000/codechef/${codechefUsername}`);
+          setCodechefData(response.data);  // Store the CodeChef data
+          setError(null);
+        } catch (error) {
+          setError('Error fetching CodeChef data. Please try again.');
+          setCodechefData(null);
+        }
+      }
+
+      const userData = response.data;
+      setUserData(userData);
+      setError(null);
+      setSubmitted(true);
+      setLoading(false);
+
+      // Assuming the structure of submissionCalendar is similar for all platforms
+      if (userData.submissionCalendar) {
+        const submissionCalendar = userData.submissionCalendar;
+        const dates = [];
+        const submissions = [];
+        const colors = [];
+
+        Object.keys(submissionCalendar).forEach((timestamp) => {
+          const date = new Date(parseInt(timestamp) * 1000);
+          const formattedDate = date.toISOString().split('T')[0];
+          const submissionCount = submissionCalendar[timestamp];
+
+          dates.push(formattedDate);
+          submissions.push(submissionCount);
+
+          const randomColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 0.2)`;
+          colors.push(randomColor);
+        });
+
+        setChartData({
+          labels: dates,
+          datasets: [
+            {
+              label: 'Number of Submissions',
+              data: submissions,
+              backgroundColor: colors,
+              borderColor: colors.map(color => color.replace('0.2', '1')),
+              borderWidth: 1,
+            },
+          ],
+        });
+      }
+    } catch (err) {
+      setError('Error fetching data, please try again');
+      setUserData(null);
+      setSubmitted(false);
+      setLoading(false);
     }
   };
 
-
-
-  const ProgressCircle = ({ percentage, color }) => {
-    const strokeDasharray = 440; // Circumference of the circle (2 * Math.PI * radius)
-    const strokeDashoffset = strokeDasharray - (percentage / 100) * strokeDasharray;
-
-    return (
-      <div className="relative w-24 h-24 mx-auto">
-        <svg className="absolute top-0 left-0" width="100%" height="100%" viewBox="0 0 120 120">
-          <circle cx="60" cy="60" r="54" stroke="#e6e6e6" strokeWidth="12" fill="none" />
-          <circle
-            cx="60"
-            cy="60"
-            r="54"
-            stroke={color}
-            strokeWidth="6"
-            fill="none"
-            strokeDasharray={strokeDasharray}
-            strokeDashoffset={strokeDashoffset}
-            style={{ transition: 'stroke-dashoffset 0.35s' }}
-          />
-        </svg>
-      </div>
-    );
-  };
-
   return (
-    <div className="w-full h-full relative pt-20 mt-36"> {/* Add padding to avoid overlap */}
+    <div className="w-full h-full relative pt-20 mt-5 text-white">
       <Navbar />
-      <form onSubmit={handleLeetSubmit} className="absolute top-0 right-0 mt-4 mr-4 flex items-center space-x-2">
-        <div className="flex flex-col space-y-1">
-          <label htmlFor="username" className="text-sm font-medium text-white">LeetCode Username</label>
-          <input  type="text"   id="username"  name="username"  value={username}    onChange={handleChange}   placeholder="Enter your LeetCode username"  
-            className=" mb-1 p-2 w-48 border text-black font-bold border-gray-300 rounded-md focus:outline-none focus:ring-2"  />
+      <form onSubmit={handleSubmit} className=" top-0 left-0 mt-12 flex flex-col space-y-8 px-10 py-8 w-full rounded-lg 
+      shadow-2xl text-white max-w-6xl mx-auto">
+        <div className="flex flex-row space-x-6">
+          <div className="w-full">
+            <label htmlFor="leetCodeUsername" className="text-lg font-semibold mb-2 block text-gray-300">LeetCode Username</label>
+            <input
+              type="text"
+              id="leetCodeUsername"
+              name="leetCodeUsername"
+              value={leetCodeUsername || ''}
+              onChange={handleChange}
+              placeholder="Enter LeetCode username"
+              className="mb-1 p-4 w-full border text-black bg-gray-100 font-semibold border-gray-400 rounded-lg 
+              focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <div className="w-full">
+            <label htmlFor="gfgUsername" className="text-lg font-semibold mb-2 block text-gray-300">GFG Username</label>
+            <input
+              type="text"
+              id="gfgUsername"
+              name="gfgUsername"
+              value={gfgUsername || ''}
+              onChange={handleChange}
+              placeholder="Enter GFG username"
+              className="mb-1 p-4 w-full border text-black bg-gray-100 font-semibold border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+          </div>
         </div>
-        <Button type="primary" text="Submit" className="w-auto" />
+
+        <div className="flex flex-row space-x-6">
+          <div className="w-full">
+            <label htmlFor="codeforcesUsername" className="text-lg font-semibold mb-2 block text-gray-300">Codeforces Username</label>
+            <input
+              type="text"
+              id="codeforcesUsername"
+              name="codeforcesUsername"
+              value={codeforcesUsername || ''}
+              onChange={handleChange}
+              placeholder="Enter Codeforces username"
+              className="mb-1 p-4 w-full border text-black bg-gray-100 font-semibold border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+
+          <div className="w-full">
+            <label htmlFor="codechefUsername" className="text-lg font-semibold mb-2 block text-gray-300">CodeChef Username</label>
+            <input
+              type="text"
+              id="codechefUsername"
+              name="codechefUsername"
+              value={codechefUsername || ''}
+              onChange={handleChange}
+              placeholder="Enter CodeChef username"
+              className="mb-1 p-4 w-full border text-black bg-gray-100 font-semibold border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+            />
+          </div>
+        </div>
+
+        <Button type="primary" text="Submit" className="w-auto text-white" />
       </form>
-      {loading && <div className="text-white mt-4">Loading...</div>}
+
+      {loading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-opacity-50 z-10">
+          <div className="w-16 h-16 border-4 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div>
+        </div>
+      )}
+
       {submitted && !loading && userData && <LeetCodeData userData={userData} />}
+      {submitted  && !loading && chartData && <LeetCodeSubmissionChart chartData={chartData} />}
+
+      {/* Use the new CodeChefData component */}
+      {submitted && !loading && codechefData && <CodeChefData codechefData={codechefData} />}
+
       {error && <div className="mt-6 text-red-500">{error}</div>}
     </div>
   );
