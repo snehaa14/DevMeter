@@ -54,9 +54,9 @@ const CodeChef = ({ ratingData , ccUserData}) => {
 
   return (
     <div className="flex justify-center items-center p-6">
-      <div className="text-center w-full  p-8 rounded-md" style={{ maxWidth: '800px' }}>
+      <div className="text-center w-full  p-11 rounded-md" style={{ maxWidth: '800px' }}>
         {/* bg-white to only this graph container */}
-        <div className="bg-white rounded-md" style={{ height: '400px', width: '100%' }}>
+        <div className="bg-white rounded-md p-5" style={{ height: '400px', width: '100%' }}>
           <Line data={data} options={options} />
         </div>
       </div>

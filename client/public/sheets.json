@@ -1,0 +1,197 @@
+{
+  "Striver SDE Sheet": {
+    "title": "Striver SDE Sheet",
+    "percentage": 0,
+    "description": "SDE Sheet contains very handily crafted and picked top coding questions that cover all important concepts.",
+    "total": 191,
+    "status": "Follow",
+    "id": "Striver SDE Sheet",
+    "topics": [
+      {
+        "topicTitle": "Arrays",
+        "subtopics": [
+          {
+            "subtopicTitle": "Basic Array Problems",
+            "questions": [
+              { "id": 1, "title": "Find the duplicate number", "link": "https://leetcode.com/problems/find-the-duplicate-number/" },
+              { "id": 2, "title": "Merge Intervals", "link": "https://leetcode.com/problems/merge-intervals/" }
+            ]
+          },
+          {
+            "subtopicTitle": "Advanced Array Problems",
+            "questions": [
+              { "id": 3, "title": "Next Permutation", "link": "https://leetcode.com/problems/next-permutation/" },
+              { "id": 4, "title": "Trapping Rain Water", "link": "https://leetcode.com/problems/trapping-rain-water/" }
+            ]
+          }
+        ]
+      },
+      {
+        "topicTitle": "Linked Lists",
+        "subtopics": [
+          {
+            "subtopicTitle": "Basic Linked List Problems",
+            "questions": [
+              { "id": 5, "title": "Reverse a Linked List", "link": "https://leetcode.com/problems/reverse-linked-list/" },
+              { "id": 6, "title": "Detect Cycle in a Linked List", "link": "https://leetcode.com/problems/linked-list-cycle/" }
+            ]
+          },
+          {
+            "subtopicTitle": "Advanced Linked List Problems",
+            "questions": [
+              { "id": 7, "title": "Merge Two Sorted Lists", "link": "https://leetcode.com/problems/merge-two-sorted-lists/" }
+            ]
+          }
+        ]
+      },
+      {
+        "topicTitle": "Trees",
+        "subtopics": [
+          {
+            "subtopicTitle": "Binary Trees",
+            "questions": [
+              { "id": 8, "title": "Binary Tree Inorder Traversal", "link": "https://leetcode.com/problems/binary-tree-inorder-traversal/" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Love Babbar DSA Sheet": {
+    "title": "Love Babbar DSA Sheet",
+    "percentage": 0,
+    "description": "This sheet is designed by Love Babbar, focusing on mastering the most important coding interview problems.",
+    "total": 450,
+    "status": "Follow",
+    "id": "Love Babbar DSA Sheet",
+    "topics": [
+      {
+        "topicTitle": "Arrays",
+        "subtopics": [
+          {
+            "subtopicTitle": "Array Basics",
+            "questions": [
+              { "id": 1, "title": "Reverse the array", "link": "https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/" },
+              { "id": 2, "title": "Find the maximum and minimum element in an array", "link": "https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/" }
+            ]
+          },
+          {
+            "subtopicTitle": "Intermediate Array Problems",
+            "questions": [
+              { "id": 3, "title": "Find the majority element", "link": "https://www.geeksforgeeks.org/majority-element/" }
+            ]
+          }
+        ]
+      },
+      {
+        "topicTitle": "Linked Lists",
+        "subtopics": [
+          {
+            "subtopicTitle": "Linked List Basics",
+            "questions": [
+              { "id": 4, "title": "Detect Cycle in Linked List", "link": "https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/" }
+            ]
+          }
+        ]
+      },
+      {
+        "topicTitle": "Searching",
+        "subtopics": [
+          {
+            "subtopicTitle": "Binary Search",
+            "questions": [
+              { "id": 5, "title": "Binary Search on Rotated Array", "link": "https://leetcode.com/problems/search-in-rotated-sorted-array/" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "NeetCode 150": {
+    "title": "NeetCode 150",
+    "percentage": 0,
+    "description": "NeetCode's sheet covers 150 essential coding interview questions curated to help crack interviews.",
+    "total": 150,
+    "status": "Follow",
+    "id": "NeetCode 150",
+    "topics": [
+      {
+        "topicTitle": "Dynamic Programming",
+        "subtopics": [
+          {
+            "subtopicTitle": "Easy DP Problems",
+            "questions": [
+              { "id": 1, "title": "Climbing Stairs", "link": "https://leetcode.com/problems/climbing-stairs/" },
+              { "id": 2, "title": "House Robber", "link": "https://leetcode.com/problems/house-robber/" }
+            ]
+          }
+        ]
+      },
+      {
+        "topicTitle": "Arrays",
+        "subtopics": [
+          {
+            "subtopicTitle": "Basic Array Problems",
+            "questions": [
+              { "id": 3, "title": "Two Sum", "link": "https://leetcode.com/problems/two-sum/" },
+              { "id": 4, "title": "Add Two Numbers", "link": "https://leetcode.com/problems/add-two-numbers/" }
+            ]
+          }
+        ]
+      },
+      {
+        "topicTitle": "Trees",
+        "subtopics": [
+          {
+            "subtopicTitle": "Binary Tree Traversal",
+            "questions": [
+              { "id": 5, "title": "Binary Tree Inorder Traversal", "link": "https://leetcode.com/problems/binary-tree-inorder-traversal/" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Example Sheet 1": {
+    "title": "Example Sheet 1",
+    "percentage": 0,
+    "description": "An example sheet to demonstrate the structure of coding interview questions.",
+    "total": 100,
+    "status": "Not Follow",
+    "id": "Example Sheet 1",
+    "topics": [
+      {
+        "topicTitle": "Example Topic 1",
+        "subtopics": [
+          {
+            "subtopicTitle": "Subtopic 1",
+            "questions": [
+              { "id": 1, "title": "Example Question 1", "link": "https://example.com/question1" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Example Sheet 2": {
+    "title": "Example Sheet 2",
+    "percentage": 0,
+    "description": "Another example sheet with more coding problems.",
+    "total": 120,
+    "status": "Follow",
+    "id": "Example Sheet 2",
+    "topics": [
+      {
+        "topicTitle": "Example Topic 2",
+        "subtopics": [
+          {
+            "subtopicTitle": "Subtopic 2",
+            "questions": [
+              { "id": 1, "title": "Example Question 3", "link": "https://example.com/question3" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

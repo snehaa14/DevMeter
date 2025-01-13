@@ -5,7 +5,7 @@ export default {
     extend: {
       animation: {
         morph: 'morph 10s infinite alternate ease-in-out',
-        'border-move': 'borderMove 5s infinite linear', // Added border-move animation
+        'border-move': 'borderMove 10s infinite linear',
       },
       keyframes: {
         morph: {

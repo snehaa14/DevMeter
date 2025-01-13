@@ -1,6 +1,5 @@
-// codechefRouter.js
-const express = require('express');
-const axios = require('axios');
+import express from 'express';
+import axios from 'axios';
 
 const codechefRouter = express.Router();
 
@@ -19,4 +18,4 @@ codechefRouter.get('/:username', async (req, res) => {
   }
 });
 
-export default router;  
+export default codechefRouter;
