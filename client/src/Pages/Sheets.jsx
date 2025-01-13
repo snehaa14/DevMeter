@@ -42,28 +42,19 @@ const Sheets = () => {
   console.log("Current sheetData state:", sheetData);
 
   return (
-    <div className='w-[100%] h-[100%]'> 
+    <div className='w-[100%] h-full'> 
       <Navbar />
-      <div className="text-center font-bold text-4xl mt-2 mb-16">Popular sheets</div>
+      <div className="text-center font-bold text-4xl mt-2 mb-16 ">Popular sheets</div>
 
-      <div className='flex flex-row flex-wrap gap-10 items-center justify-center'>
-        {/* Render the sheet cards only if sheetData is an array */}
+      <div className='flex flex-row flex-wrap gap-10 items-center justify-center h-full'>
+  
         {Array.isArray(sheetData) && sheetData.length > 0 ? (
-          sheetData.map((sheet, index) => (
-            <SheetCard 
-              key={index} 
-              title={sheet.title} 
-              percentage={sheet.percentage} 
-              description={sheet.description} 
-              total={sheet.total} 
-              status={sheet.status}
-              onFollowToggle={() => handleFollowToggle(index)} 
-              onCardClick={() => handleCardClick(sheet.id, sheet.status, sheet.questions)} // Pass id, status, and questions
-            />
+          sheetData.map((sheet, index) => 
+          (
+            <SheetCard   key={index}   title={sheet.title}   percentage={sheet.percentage}   description={sheet.description}   total={sheet.total}   status={sheet.status}
+            onFollowToggle={() => handleFollowToggle(index)}  onCardClick={() => handleCardClick(sheet.id, sheet.status, sheet.questions)} />
           ))
-        ) : (
-          <p>Loading sheets...</p> // Show a loading message or spinner while data is being fetched
-        )}
+        ) : ( <p>Loading sheets...</p> )}
       </div>
     </div>
   );

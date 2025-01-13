@@ -1,3 +1,4 @@
+
 {
   "Striver SDE Sheet": {
     "title": "Striver SDE Sheet",
@@ -72,122 +73,145 @@
             "subtopicTitle": "Array Basics",
             "questions": [
               { "id": 1, "title": "Reverse the array", "link": "https://www.geeksforgeeks.org/write-a-program-to-reverse-an-array-or-string/" },
-              { "id": 2, "title": "Find the maximum and minimum element in an array", "link": "https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/" }
+              { "id": 2, "title": "Find the maximum and minimum element in an array", "link": "https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/" },
+              { "id": 3, "title": "Find the kth smallest element", "link": "https://practice.geeksforgeeks.org/problems/kth-smallest-element5635/1" },
+              { "id": 4, "title": "Sort an array of 0s, 1s and 2s", "link": "https://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/" },
+              { "id": 5, "title": "Move all negative numbers to beginning", "link": "https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/" },
+              { "id": 6, "title": "Cyclically rotate an array by one", "link": "https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/0" },
+              { "id": 7, "title": "Find the largest sum contiguous subarray (Kadane’s Algorithm)", "link": "https://practice.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1" },
+              { "id": 8, "title": "Minimize the maximum difference between heights", "link": "https://practice.geeksforgeeks.org/problems/minimize-the-heights3351/1" },
+              { "id": 9, "title": "Minimum number of jumps to reach the end of the array", "link": "https://practice.geeksforgeeks.org/problems/minimum-number-of-jumps-1587115620/1" },
+              { "id": 10, "title": "Find the duplicate in an array of N+1 integers", "link": "https://leetcode.com/problems/find-the-duplicate-number/" }
             ]
           },
           {
             "subtopicTitle": "Intermediate Array Problems",
             "questions": [
-              { "id": 3, "title": "Find the majority element", "link": "https://www.geeksforgeeks.org/majority-element/" }
+              { "id": 11, "title": "Merge two sorted arrays without extra space", "link": "https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1" },
+              { "id": 12, "title": "Find the intersection of two arrays", "link": "https://practice.geeksforgeeks.org/problems/intersection-of-two-arrays/0" },
+              { "id": 13, "title": "Find the union of two arrays", "link": "https://practice.geeksforgeeks.org/problems/union-of-two-arrays/0" },
+              { "id": 14, "title": "Find the missing number in an array", "link": "https://practice.geeksforgeeks.org/problems/missing-number-in-array1416/1" },
+              { "id": 15, "title": "Find subarray with given sum", "link": "https://practice.geeksforgeeks.org/problems/subarray-with-given-sum-1587115621/1" },
+              { "id": 16, "title": "Count the number of subarrays with given XOR", "link": "https://www.geeksforgeeks.org/count-number-subarrays-given-xor/" },
+              { "id": 17, "title": "Find the longest consecutive subsequence", "link": "https://practice.geeksforgeeks.org/problems/longest-consecutive-subsequence/0" },
+              { "id": 18, "title": "Find the inversion count in an array", "link": "https://practice.geeksforgeeks.org/problems/inversion-of-array-1587115620/1" },
+              { "id": 19, "title": "Find all pairs on integer array whose sum is equal to given number", "link": "https://www.geeksforgeeks.org/count-pairs-with-given-sum/" },
+              { "id": 20, "title": "Find the triplet that sums to a given value", "link": "https://practice.geeksforgeeks.org/problems/triplet-sum-in-array/0" }
+            ]
+          },
+          {
+            "subtopicTitle": "Advanced Array Problems",
+            "questions": [
+              { "id": 21, "title": "Trapping rain water problem", "link": "https://practice.geeksforgeeks.org/problems/trapping-rain-water-1587115621/1" },
+              { "id": 22, "title": "Product of array except self", "link": "https://leetcode.com/problems/product-of-array-except-self/" },
+              { "id": 23, "title": "Maximum product subarray", "link": "https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1" },
+              { "id": 24, "title": "Find if there is a subarray with 0 sum", "link": "https://practice.geeksforgeeks.org/problems/subarray-with-0-sum/0" },
+              { "id": 25, "title": "Find the largest subarray with 0 sum", "link": "https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1" },
+              { "id": 26, "title": "Find the longest subarray with sum divisible by K", "link": "https://practice.geeksforgeeks.org/problems/longest-subarray-with-sum-divisible-by-k1259/1" },
+              { "id": 27, "title": "Find the majority element in an array", "link": "https://practice.geeksforgeeks.org/problems/majority-element/0" },
+              { "id": 28, "title": "Median of two sorted arrays of different sizes", "link": "https://practice.geeksforgeeks.org/problems/median-of-2-sorted-arrays-of-different-sizes/1" },
+              { "id": 29, "title": "Find the maximum sum such that no two elements are adjacent", "link": "https://practice.geeksforgeeks.org/problems/stickler-theif-1587115621/1" },
+              { "id": 30, "title": "Find the minimum number of swaps required to sort the array", "link": "https://practice.geeksforgeeks.org/problems/minimum-swaps/1" }
             ]
           }
         ]
       },
       {
-        "topicTitle": "Linked Lists",
+        "topicTitle": "Stacks",
         "subtopics": [
           {
-            "subtopicTitle": "Linked List Basics",
+            "subtopicTitle": "Easy Level",
             "questions": [
-              { "id": 4, "title": "Detect Cycle in Linked List", "link": "https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/" }
+              {
+                "id": 101,
+                "title": "Implement Stack from Scratch",
+                "link": "https://www.geeksforgeeks.org/stack-data-structure/"
+              },
+              {
+                "id": 102,
+                "title": "Check for Balanced Parentheses",
+                "link": "https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/"
+              }
+            ]
+          },
+          {
+            "subtopicTitle": "Medium Level",
+            "questions": [
+              {
+                "id": 103,
+                "title": "Next Greater Element",
+                "link": "https://www.geeksforgeeks.org/next-greater-element/"
+              },
+              {
+                "id": 104,
+                "title": "Stock Span Problem",
+                "link": "https://www.geeksforgeeks.org/the-stock-span-problem/"
+              }
+            ]
+          },
+          {
+            "subtopicTitle": "Hard Level",
+            "questions": [
+              {
+                "id": 105,
+                "title": "Find the Maximum Area of a Histogram",
+                "link": "https://www.geeksforgeeks.org/largest-rectangle-under-histogram/"
+              },
+              {
+                "id": 106,
+                "title": "Trapping Rain Water Problem",
+                "link": "https://www.geeksforgeeks.org/trapping-rain-water/"
+              }
             ]
           }
         ]
       },
       {
-        "topicTitle": "Searching",
+        "topicTitle": "Queues",
         "subtopics": [
           {
-            "subtopicTitle": "Binary Search",
+            "subtopicTitle": "Easy Level",
             "questions": [
-              { "id": 5, "title": "Binary Search on Rotated Array", "link": "https://leetcode.com/problems/search-in-rotated-sorted-array/" }
+              {
+                "id": 201,
+                "title": "Implement Queue from Scratch",
+                "link": "https://www.geeksforgeeks.org/queue-data-structure/"
+              },
+              {
+                "id": 202,
+                "title": "Generate Binary Numbers from 1 to N using Queue",
+                "link": "https://www.geeksforgeeks.org/print-binary-numbers-1-n-using-queue/"
+              }
             ]
-          }
-        ]
-      }
-    ]
-  },
-  "NeetCode 150": {
-    "title": "NeetCode 150",
-    "percentage": 0,
-    "description": "NeetCode's sheet covers 150 essential coding interview questions curated to help crack interviews.",
-    "total": 150,
-    "status": "Follow",
-    "id": "NeetCode 150",
-    "topics": [
-      {
-        "topicTitle": "Dynamic Programming",
-        "subtopics": [
+          },
           {
-            "subtopicTitle": "Easy DP Problems",
+            "subtopicTitle": "Medium Level",
             "questions": [
-              { "id": 1, "title": "Climbing Stairs", "link": "https://leetcode.com/problems/climbing-stairs/" },
-              { "id": 2, "title": "House Robber", "link": "https://leetcode.com/problems/house-robber/" }
+              {
+                "id": 203,
+                "title": "Implement a Circular Queue",
+                "link": "https://www.geeksforgeeks.org/circular-queue-set-1-introduction-array-implementation/"
+              },
+              {
+                "id": 204,
+                "title": "Reverse First K elements of Queue",
+                "link": "https://www.geeksforgeeks.org/reverse-first-k-elements-queue/"
+              }
             ]
-          }
-        ]
-      },
-      {
-        "topicTitle": "Arrays",
-        "subtopics": [
+          },
           {
-            "subtopicTitle": "Basic Array Problems",
+            "subtopicTitle": "Hard Level",
             "questions": [
-              { "id": 3, "title": "Two Sum", "link": "https://leetcode.com/problems/two-sum/" },
-              { "id": 4, "title": "Add Two Numbers", "link": "https://leetcode.com/problems/add-two-numbers/" }
-            ]
-          }
-        ]
-      },
-      {
-        "topicTitle": "Trees",
-        "subtopics": [
-          {
-            "subtopicTitle": "Binary Tree Traversal",
-            "questions": [
-              { "id": 5, "title": "Binary Tree Inorder Traversal", "link": "https://leetcode.com/problems/binary-tree-inorder-traversal/" }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "Example Sheet 1": {
-    "title": "Example Sheet 1",
-    "percentage": 0,
-    "description": "An example sheet to demonstrate the structure of coding interview questions.",
-    "total": 100,
-    "status": "Not Follow",
-    "id": "Example Sheet 1",
-    "topics": [
-      {
-        "topicTitle": "Example Topic 1",
-        "subtopics": [
-          {
-            "subtopicTitle": "Subtopic 1",
-            "questions": [
-              { "id": 1, "title": "Example Question 1", "link": "https://example.com/question1" }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "Example Sheet 2": {
-    "title": "Example Sheet 2",
-    "percentage": 0,
-    "description": "Another example sheet with more coding problems.",
-    "total": 120,
-    "status": "Follow",
-    "id": "Example Sheet 2",
-    "topics": [
-      {
-        "topicTitle": "Example Topic 2",
-        "subtopics": [
-          {
-            "subtopicTitle": "Subtopic 2",
-            "questions": [
-              { "id": 1, "title": "Example Question 3", "link": "https://example.com/question3" }
+              {
+                "id": 205,
+                "title": "First non-repeating character in a stream",
+                "link": "https://www.geeksforgeeks.org/first-non-repeating-character-in-a-stream/"
+              },
+              {
+                "id": 206,
+                "title": "Queue Reversal",
+                "link": "https://www.geeksforgeeks.org/queue-reversal/"
+              }
             ]
           }
         ]
@@ -195,3 +219,4 @@
     ]
   }
 }
+
