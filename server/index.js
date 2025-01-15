@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 import AuthRouter from './Routes/AuthRouter.js'
 import LeetCodeRouter from './Routes/LeetCodeRouter.js'
 import CodechefRouter from './Routes/CodechefRouter.js'
+import CodeforcesRouter from './Routes/CodeforcesRouter.js'
 
 
 import contestRoute from './Routes/contestRoutes.js'
@@ -49,6 +50,8 @@ app.use('/leetcode', LeetCodeRouter);
 
 // app.get('/codechef/:username
 app.use('/codechef', CodechefRouter);
+
+app.use('/codeforces',CodeforcesRouter);
 
 
 

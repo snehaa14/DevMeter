@@ -5,7 +5,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-const CodeChef = ({ ratingData , ccUserData}) => {
+const CodeChef = ({ ratingData, ccUserData }) => {
   // Extract the necessary data for the graph
   const labels = ratingData.map(item => `${item.getday}/${item.getmonth}/${item.getyear}`);
   const ratings = ratingData.map(item => parseInt(item.rating));
@@ -17,12 +17,14 @@ const CodeChef = ({ ratingData , ccUserData}) => {
       {
         label: 'CodeChef Rating',
         data: ratings,  // Y-axis values (ratings)
-        borderColor: '#00C49F',
-        backgroundColor: 'rgba(30, 125, 34, 0.5)',
-        fill: false,
+        borderColor: '#FF1493',  // Pink color for the line
+        backgroundColor: 'rgba(255, 20, 147, 0.2)',  // Light pink background for the line area
+        fill: true,  // Fill the area under the line
         tension: 0.1,
-        pointRadius: 5,  // To make points more noticeable
-        pointHoverRadius: 8,  // Larger point radius when hovering
+        pointRadius: 0,  // Hide points by default
+        pointHoverRadius: 5,  // Show larger circles on hover
+        pointHoverBackgroundColor: '#FF1493',  // Pink color for the hover point
+        pointHoverBorderColor: '#FF1493',  // Pink border for the hover point
       },
     ],
   };
@@ -48,7 +50,17 @@ const CodeChef = ({ ratingData , ccUserData}) => {
       }
     },
     scales: {
-      y: { beginAtZero: false },
+      x: {
+        grid: {
+          display: false, // Remove grid lines on the x-axis
+        },
+      },
+      y: {
+        grid: {
+          display: false, // Remove grid lines on the y-axis
+        },
+        beginAtZero: false,
+      },
     },
   };
 

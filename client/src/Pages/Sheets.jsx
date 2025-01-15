@@ -13,7 +13,7 @@ const Sheets = () => {
       try {
         const response = await fetch('/sheets.json'); // Fetch the JSON file
         const data = await response.json(); // Parse the JSON
-        console.log("Data fetched:", data);
+        // console.log("Data fetched:", data);
 
         // Convert the object to an array
         const sheetsArray = Object.values(data); // Extract the values (sheet details) into an array
@@ -39,7 +39,7 @@ const Sheets = () => {
   };
 
   // Debugging: Log sheetData to see if it's being correctly updated in the state
-  console.log("Current sheetData state:", sheetData);
+  // console.log("Current sheetData state:", sheetData);
 
   return (
     <div className='w-[100%] h-full'> 
