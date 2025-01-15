@@ -12,6 +12,7 @@ import UpcomingContest from './Pages/UpcomingContest';
 import { ToastContainer } from 'react-toastify'; // Import ToastContainer
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify styles
 import SheetDetail from './Components/sheetDetails';
+import Profile from './Pages/Profile';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
             <Route path='/performance' element={<Performance />} />
             <Route path='/contest/upcoming-contest' element={<UpcomingContest />} />
             <Route path="/sheet/:id/:status" element={<SheetDetail />} />
+            <Route path='/profile' element={<Profile/>}/>
+            
           </Routes>
         </div>
       </Router>
